@@ -197,7 +197,7 @@ function getRandomUint256(): bigint {
 
   crypto.getRandomValues(dest); // Fill the typed array with cryptographically secure random values
 
-  let result = 0n;
+  let result = BigInt(0);
   for (let i = 0; i < dest.length; i++) {
     result |= BigInt(dest[i]) << BigInt(8 * i); // Combine individual bytes into one bigint
   }
